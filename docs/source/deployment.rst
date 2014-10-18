@@ -12,7 +12,7 @@ Before continue, be sure to create your git repository::
     $ git commit -m"Initial commit"
 
 .. note::
-   Generated project already have a valid ``.gitignore`` for Django
+   Generated projects already have a valid ``.gitignore`` for Django
 
 Heroku
 ------
@@ -36,10 +36,7 @@ Heroku configuration
 Set these enviroment variables so production configuration will work like expected::
 
     $ heroku config:set DJANGO_SECRET_KEY=<random secret key>
-    $ heroku config:set DJANGO_SETTINGS_MODULE=django_cms.settings.production
-
-.. note::
-   ``django_cms`` package could have a different name according to your initial choose
+    $ heroku config:set DJANGO_SETTINGS_MODULE={{ cookiecutter.django_cms_app }}.settings.production
 
 Configure your `AWS bucket`_ and add these environment variables to Heroku::
 
@@ -54,11 +51,9 @@ Syncdb and collect static
 
 Run these commands using Heroku ``run``::
 
-    $ heroku run python django_cms/manage.py syncdb --all
-    $ heroku run python django_cms/manage.py migrate --fake
-    $ heroku run python django_cms/manage.py collectstatic
-
-.. note::
-   ``django_cms`` package could have a different name according to your initial choose
+    $ heroku run python {{ cookiecutter.django_cms_app }}/manage.py syncdb --all
+    $ heroku run python {{ cookiecutter.django_cms_app }}/manage.py migrate --fake
+    $ heroku run python {{ cookiecutter.django_cms_app }}/manage.py collectstatic
 
 That's all! Your Django CMS website is deployed on Heroku platform!
+

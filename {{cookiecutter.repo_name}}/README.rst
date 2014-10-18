@@ -16,22 +16,22 @@
 Requirements
 ------------
 
-* Django 1.5+
+* Django 1.6+
 * Python 2.7
-* `django-cms`_ (unstable at this time)
+* `django-cms`_ 3.0.6
 
 .. _django-cms: https://github.com/divio/django-cms
 
 Installation
 ------------
 
-Enter inside ``{{ cookiecutter.repo_name }}`` folder and install all requirements inside a virtualenv:
+Enter the ``{{ cookiecutter.repo_name }}`` folder and install all requirements inside a virtualenv:
 
 .. code-block:: python
 
     pip install -r requirements/development.txt
 
-Enter inside ``{{ cookiecutter.django_cms_app }}`` then prepare your database (sqlite as default) and run the server:
+Enter the ``{{ cookiecutter.django_cms_app }}`` then prepare your database (sqlite as default) and run the server:
 
 .. code-block:: python
 

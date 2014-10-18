@@ -77,17 +77,17 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/CookiecutterDjangoCMS.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/CCDjangoCMS.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/CookiecutterDjangoCMS.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/CCDjangoCMS.qhc"
 
 devhelp:
 	$(SPHINXBUILD) -b devhelp $(ALLSPHINXOPTS) $(BUILDDIR)/devhelp
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/CookiecutterDjangoCMS"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/CookiecutterDjangoCMS"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/CCDjangoCMS"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/CCDjangoCMS"
 	@echo "# devhelp"
 
 epub:

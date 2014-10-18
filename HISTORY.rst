@@ -2,6 +2,20 @@
 Changelog
 =========
 
+0.2.4 (2014-10-16) (ssharkey@lanshark.com)
+------------------------------------------
+
+New Features:
+
+Bug Fixes:
+
+Other Changes:
+
+* Update Django CMS to 3.0.6
+* Update Django to 1.6.7
+* Update 
+* Change defaults to suit me
+
 0.2.3 (2013-12-23)
 ------------------
 

@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath="$PWD/django_cms" django_cms.wsgi:application -t 120 -w 8 -k gevent --max-requests 250
+web: gunicorn --pythonpath="$PWD/{{ cookiecutter.django_cms_app }}" {{ cookiecutter.django_cms_app }}.wsgi:application -t 120 -w 8 -k gevent --max-requests 250

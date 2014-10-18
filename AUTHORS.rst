@@ -6,6 +6,7 @@ Development Lead
 ----------------
 
 * Emanuele Palazzetti <hello@palazzetti.me>
+* Scott Sharkey <ssharkey@lanshark.com>
 
 Contributors
 ------------

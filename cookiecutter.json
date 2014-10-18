@@ -1,15 +1,15 @@
 {
-	"full_name": "Michael Scott",
-	"email": "bestboss.scott@example.com",
-	"github_username": "mscott",
-    "year": "2013",
+	"full_name": "Scott Sharkey",
+	"email": "ssharkey@lanshark.com",
+	"github_username": "lanshark",
+    "year": "2014",
 	"version": "0.1.0",
-	"project_name": "Django CMS",
-	"repo_name": "django-cms-web",
-    "django_cms_app": "django_cms",
+	"project_name": "Django CMS Sample Project",
+	"repo_name": "client-django-cms",
+    "django_cms_app": "cms-app",
 	"project_short_description": "Django CMS boilerplate to start your website in 5 minutes.",
     "languages": "en",
-    "site_name": "example.com",
-    "django_filer": "n",
-    "heroku": "y"
+    "site_name": "lanshark.com",
+    "django_filer": "y",
+    "heroku": "n"
 }

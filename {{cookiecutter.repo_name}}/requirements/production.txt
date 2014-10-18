@@ -1,11 +1,14 @@
 # Production requirements
 -r base.txt
 
-psycopg2==2.5.1
+psycopg2==2.5.4
 {% if cookiecutter.heroku == "y" or cookiecutter.heroku == "Y" %}
-dj-database-url==0.2.2
-gunicorn==18.0
-django-storages==1.1.4
-boto==2.21.1
-gevent==0.13.8
+dj-database-url==0.3.0
+django-storages==1.1.8
+boto==2.33.0
+gunicorn==19.1.1
+gevent==1.0.1
+{% else %}
+uwsgi==2.0.7
 {% endif %}
+

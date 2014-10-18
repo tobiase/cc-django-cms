@@ -3,7 +3,7 @@ Overview
 ========
 
 .. warning::
-   All these steps follow the `Django CMS documentation`_ (still in beta). However this is **ONLY** a cookiecutter template and there is **NO INTENTION** to replace the official documentation.
+   All these steps follow the `Django CMS documentation`_. However this is **ONLY** a cookiecutter template and there is **NO INTENTION** to replace the official documentation.
 
 .. _Django CMS documentation: http://docs.django-cms.org/en/develop/index.html
 
@@ -22,10 +22,3 @@ Features?
 .. _@pydanny: http://twitter.com/pydanny
 .. _@audreyr: http://twitter.com/audreyr
 
-Similar projects
-----------------
-
-* `aldryn-installer`_ from `@nephila`_
-
-.. _aldryn-installer: https://github.com/nephila/aldryn-installer
-.. _@nephila: http://twitter.com/NephilaIt
