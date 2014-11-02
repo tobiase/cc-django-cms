@@ -6,6 +6,12 @@ Changelog
 ------------------------------------------
 
 New Features:
+* make django-filer the default installation
+* Add django-configurations for settings?
+* Add UWSGI if not on heroku
+* Optional use of AWS S3 Storage in Production
+* Add Timezone Variable
+* Added logging configuration to local settings
 
 Bug Fixes:
 
@@ -13,7 +19,7 @@ Other Changes:
 
 * Update Django CMS to 3.0.6
 * Update Django to 1.6.7
-* Update 
+* Update all dependencies to latest versions
 * Change defaults to suit me
 
 0.2.3 (2013-12-23)

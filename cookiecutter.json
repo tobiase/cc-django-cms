@@ -10,6 +10,7 @@
 	"project_short_description": "Django CMS boilerplate to start your website in 5 minutes.",
     "languages": "en",
     "site_name": "lanshark.com",
-    "django_filer": "y",
-    "heroku": "n"
+    "timezone": "America/New_York",
+    "use_heroku": "n"
+    "use_S3": "n"
 }

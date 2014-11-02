@@ -10,7 +10,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ( '{{ cookiecutter.full_name }}', '{{ cookiecutter.email }}' ),
 )
 
 MANAGERS = ADMINS
@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/New_York'
+TIME_ZONE = '{{ cookiecutter.timezone }}'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -152,14 +152,21 @@ INSTALLED_APPS = (
     'south',
     'sekizai',
     'djangocms_admin_style',
+    'django-admin-shortcuts',
+    'django-classy-tags',
+    'django-messages',
 
     # Django CMS extra plugins
-    'cms.plugins.flash',
-    'cms.plugins.googlemap',
-    'cms.plugins.link',
-    # 'cms.plugins.snippet', # security warning (see: http://docs.django-cms.org/en/develop/getting_started/plugin_reference.html#snippets-plugin)
+    'djangocms_column',
+    'djangocms_googlemap',
+    'djangocms_grid',
+    'djangocms_link',
+    'djangocms_oembed',
+    # 'djangocms_snippet', # security warning (see: http://docs.django-cms.org/en/develop/getting_started/plugin_reference.html#snippets-plugin)
+    'djangocms_style',
+    'djangocms_table',
+    'djangocms_twitter',
 
-    {%- if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" -%}
     # Django filer
     'filer',
     'easy_thumbnails',
@@ -168,18 +175,12 @@ INSTALLED_APPS = (
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
-    {%- else -%}
-    # Optional Django CMS plugins
-    'cms.plugins.file',
-    'cms.plugins.picture',
-    'cms.plugins.teaser',
-    'cms.plugins.video',
-    {% endif %}
     'reversion',
 
     # Django admin
     'django.contrib.admin',
 )
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -224,9 +225,68 @@ LANGUAGES = [
     {% endfor %}
 ]
 
-{% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
+# Django-Filer Settings:
+THUMBNAIL_HIGH_RESOLUTION = True
 TEXT_SAVE_IMAGE_FUNCTION='cmsplugin_filer_image.integrations.ckeditor.create_image_plugin'
-{% endif %}
+
+CMSPLUGIN_FILER_IMAGE_STYLE_CHOICES = (
+            ('default', 'Default'),
+                ('boxed', 'Boxed'),
+                )
+CMSPLUGIN_FILER_IMAGE_DEFAULT_STYLE = 'default'
+FILER_IMAGE_USE_ICON =
 
 # Analytics
 GOOGLE_ANALYTICS = environ.get('GOOGLE_ANALYTICS', '')
+
+
+# Django-CMS specific settings...
+
+CMS_TEMPLATE_INHERITANCE = True
+
+CMS_TEMPLATES = (
+    ('homepage.html', 'Homepage'),
+    ('carousel-full-under.html', 'Carousel, Full Width Under'),
+    ('full-page-no-feature.html', 'Full Width, no Feature'),
+    ('full-top-right-feature.html', 'Full Width 1st, Feature Right'),
+    ('right-feature.html', 'Text, Right Feature'),
+    ('search.html', 'Search Page'),
+)
+
+LANGUAGES = [
+    ('en', 'English'),
+]
+
+CMS_PERMISSION = True
+
+#SAS - this needs configured eventually...
+CMS_PLACEHOLDER_CONF = {}
+
+CMS_MENU_TITLE_OVERWRITE = True
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+
+CMS_LANGUAGES = {
+    'default': {
+        'public': True,
+        'hide_untranslated': False,
+        'redirect_on_fallback': True,
+    },
+    1: [
+        {
+            'public': True,
+            'code': 'en',
+            'hide_untranslated': False,
+            'name': gettext('en'),
+            'redirect_on_fallback': True,
+        },
+    ],
+}
+
+

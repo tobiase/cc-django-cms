@@ -5,18 +5,23 @@ TEMPLATE_DEBUG = DEBUG
 
 SITE_ID = 2
 
-{% if cookiecutter.heroku == "y" or cookiecutter.heroku == "Y" %}
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
-
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 ALLOWED_HOSTS = [
     '{{ cookiecutter.site_name }}',
 ]
 
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+INSTALLED_APPS += (
+    'ganalytics',
+)
+
+
+{% if cookiecutter.use_S3 == "y" or cookiecutter.use_S3 == "Y" %}
 INSTALLED_APPS += (
     'storages',
 )

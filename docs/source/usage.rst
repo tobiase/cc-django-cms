@@ -26,8 +26,9 @@ You'll be prompted for some project configurations::
     project_short_description (default is "Django CMS boilerplate to start your website in 5 minutes.")?
     languages (default is "en")?
     site_name (default is "lanshark.com")?
-    django_filer (default is "y")?
-    heroku (default is "n")?
+    timezone (default is "America/New_York")?
+    use_heroku (default is "n")?
+    use_S3 (default is "n")?
 
 Now you are ready to use Django CMS!
 
