@@ -18,7 +18,7 @@ Bug Fixes:
 Other Changes:
 
 * Update Django CMS to 3.0.6
-* Update Django to 1.6.7
+* Update Django to 1.6.8
 * Update all dependencies to latest versions
 * Change defaults to suit me
 
