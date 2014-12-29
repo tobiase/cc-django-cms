@@ -179,7 +179,16 @@ INSTALLED_APPS = (
 
     # Django admin
     'django.contrib.admin',
+
+    # Useful Tools
+    'copyright',
+
+    # Your Applications
+
 )
+
+# Copyright ...
+COPY_START_YEAR = 2015
 
 
 # A sample logging configuration. The only tangible logging

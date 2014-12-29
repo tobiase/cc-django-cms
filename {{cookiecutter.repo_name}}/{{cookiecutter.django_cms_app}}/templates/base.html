@@ -2,6 +2,7 @@
 {% load staticfiles %}
 {% load cms_tags sekizai_tags %}
 {% load menu_tags %}
+{% load copyright_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +32,10 @@
         {% show_menu 0 100 100 100 "menu.html" %}
         <div class="container">
             {% block base_content %}{% endblock base_content %}
+        </div>
+
+        <div class='footer'>
+            {% getCopyrightYears %)
         </div>
 
         <!-- JavaScript -->
