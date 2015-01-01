@@ -16,6 +16,6 @@ boto==2.34.0
 gunicorn==19.1.1
 gevent==1.0.1
 {% else %}
-uwsgi==2.0.8
+uwsgi==2.0.9
 {% endif %}
 
