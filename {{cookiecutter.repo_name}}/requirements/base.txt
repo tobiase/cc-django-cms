@@ -1,4 +1,4 @@
-Django==1.6.8
+Django==1.6.9
 
 # Django CMS 3
 django-cms==3.0.7
@@ -29,6 +29,6 @@ easy-thumbnails==2.2
 html5lib==1.0b3
 pytz==2014.10
 pillowcase==2.0.0
-six==1.8.0
+six==1.9.0
 South==1.0.2
 
